@@ -6,7 +6,7 @@ const port: number = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 
-app.get('/api/leftovers', (req: Request, res: Response) => {
+app.post('/api/leftovers', (req: Request, res: Response) => {
   let input = req.body;
   try {
     const message = busTrackingService.claculateLeftovers(input)
